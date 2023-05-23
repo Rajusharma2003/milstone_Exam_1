@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Text on Button </title>
+
+    <!-- CSS -->
+
+    <style>
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    font-size: 25px;
+}
+
+h1{
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 10px;
+}
+#button {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 18px;
+}
+
+#button:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+#button:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #222;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+        
+    </style>
+</head>
+<body>
+    
+<h1 id="headingText">The most affordable learning platform is </h1>
+
+<button id="button"> Click To Change Text </button>
+
+
+<!-- JavaScript -->
+
+<script>
+    const heading  = document.getElementById("headingText");
+    const button  = document.getElementById("button");
+
+    button.addEventListener("click" , changeText);
+
+    function changeText(){
+        
+        heading.innerText == "The most affordable learning platform is"
+         ? heading.innerText = "PW Skills" 
+         : heading.innerText = "PW Skills Is The Best Platform To Learn Codeing"
+    } 
+</script>
+
+</body>
+</html>
+
+

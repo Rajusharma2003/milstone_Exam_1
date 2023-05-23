@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Capitalize | DOM Project | 5</title>
+
+  <!-- link CSS -->
+  <link rel="stylesheet" href="./Capitalize.css">
+</head>
+<body>
+
+  <form id="container">
+<div class="contitem">
+  <h1> Capitalize Input by DOM </h1>
+
+    <label for="name">Name : </label>
+    <input type="text" id="name" placeholder="Enter Your input">
+   
+    <!-- This is for button -->
+    <button type="submit" id="button" onclick="fun()">submit</button>
+  </form>
+</div>
+
+
+
+
+
+  <!-- JavaScript -->
+  <script>
+    const form = document.getElementById("container");
+    const InputName = document.getElementById("name");
+    const button = document.getElementById("button");
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+    });
+
+    function fun() {
+
+        // this is create by Ternary Operator.
+      let firstLetter = InputName.value[0].toLowerCase();
+      InputName.value = firstLetter === InputName.value[0] ? firstLetter.toUpperCase() + InputName.value.slice(1) : InputName.value;
+
+
+    //   this is create by if and else statement.
+    //      if (firstLetter === firstLetter.toLowerCase()) {
+    //      InputName.value = firstLetter.toUpperCase() + InputName.value.slice(1);
+    //  } 
+
+
+    }
+
+  </script>
+</body>
+</html>

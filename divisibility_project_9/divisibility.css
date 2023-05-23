@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+ 
+
+}
+
+/* This is for main and mainitems section */
+.cont{
+    background-color: #7c887f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+.contitem{
+    border: 2px solid black;
+    background-image: linear-gradient(to right , rgb(31, 30, 30) ,rgb(14, 56, 5));
+    box-shadow: 0px 0px 30px rgb(255, 253, 253);
+    border-radius: 20px;
+    color: white;
+    padding: 100px;
+   
+    
+
+}
+
+
+/* This is for show info section */
+h1{
+   margin-bottom: 150px;
+   font-size: 50px;
+}
+
+p{
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    width: 900px;
+}
+
+
+/* This is for inside the form section */
+#form{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+border: 2px solid black;
+margin-top: 100px;
+padding: 20px;
+}
+
+
+#input{
+    padding: 15px 85px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    text-align: center;
+
+}
+label{
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+#input:hover{
+    box-shadow: 2px 2px 5px rgb(255, 253, 253);
+
+}
+
+#button{
+      background-color: #cfcece;
+      border-radius: 10px;
+      border: 0;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 24px;
+      min-height: 56px;
+      min-width: 100px;
+      padding: 10px 15px;
+      position: relative;
+      font-size: 18px;
+      text-align: center;
+      transition: all .2s cubic-bezier(.22, .61, .36, 1);
+
+    }
+    
+    #button:hover {
+      background-color: #0a550e;
+      color: white;
+    box-shadow: 2px 2px 5px rgb(255, 253, 253);
+
+      transform: translateY(-3px);   
+    }
+    
+    @media (min-width: 768px) {
+      #button {
+        padding: 16px 10px;
+        min-width: 150px;
+      }
+    }
+
+
+
+    /* This is for footer section for showing massage  */
+
+#massage{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    letter-spacing: 5px;
+    font-weight: 800;
+    color: rgb(255, 0, 0);
+    
+}

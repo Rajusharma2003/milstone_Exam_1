@@ -1,0 +1,120 @@
+/* CSS reset */
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+/* This is for body or inside the body contant */
+body{
+    background-color: #775cf0;
+}
+
+.cont{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.itemCont{
+    border: 2px solid black;
+   background-color: #c4bebe;
+   
+
+  
+}
+h1{
+ border: 2px solid black;
+background-color: #202020;
+color: white;
+font-size: 50px;
+width: 80vw;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+  
+}
+
+/* This is for input */
+#input{
+   padding: 12px 100px;
+   display: block;
+   margin: auto;
+   font-size: 20px;
+   margin-top: 100px;
+   border-radius: 10px;
+
+
+
+}
+
+#input:hover{
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+
+}
+
+
+/* This is for button  */
+#button{
+    display: block;
+    margin: auto;
+   padding: 12px 100px;
+   cursor: pointer;
+   font-size: 20px;
+   margin-top: 50px;
+   margin-bottom: 200px;
+   border-radius: 10px;
+   
+
+
+}
+
+
+#button{
+    background-color: #a55bfa;
+    border-radius: 4px;
+    border: 0;
+    box-shadow: rgba(1,60,136,.5) 0 -1px 3px 0 inset,rgba(0,44,97,.1) 0 3px 6px 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 16px 20px;
+    position: relative;
+    text-align: center;
+    transition: all .2s cubic-bezier(.22, .61, .36, 1);
+  }
+  
+  
+  #button:hover {
+    background-color: #065dd8;
+    transform: translateY(-4px);
+  }
+  
+  @media (min-width: 768px) {
+    
+  #button {
+      padding: 16px 44px;
+      min-width: 150px;
+    }
+  }
+
+/* This is for passing massage */
+#PassingMassage{
+    border: 2px solid black;
+    background-color: #202020;
+    color: rgb(255, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    font-weight: bolder;
+    font-size: 30px;
+    width: 80vw;
+    height: 80px;
+    letter-spacing: 10px;
+    
+}

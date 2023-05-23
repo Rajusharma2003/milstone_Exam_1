@@ -1,0 +1,96 @@
+
+
+
+
+<!-- pw -->
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heighest | Number | Calculate</title>
+
+    <link rel="stylesheet" href="./Heighest_Number.css" />
+    <!-- Link google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="continer">
+        <div class="cont_item">
+            <h1>Heighest Marks Evalution</h1>
+
+            <h3>Enter marks of all the five student</h3>
+
+            <label for="mark1">Student 1 : </label>
+            <input type="text" name="mark" id="Number1" placeholder="Input Marks 1" />
+            <br />
+
+            <label for="mark2">Student 2 : </label>
+            <input type="text" name="mark" id="Number2" placeholder="Input Marks 2" />
+
+            <br />
+            <label for="mark3">Student 3 : </label>
+            <input type="text" name="mark" id="Number3" placeholder="Input Marks 3" />
+
+            <br />
+            <label for="mark4">Student 4 : </label>
+            <input type="text" name="mark" id="Number4" placeholder="Input Marks 4" />
+
+            <br />
+
+            <label for="mark5">Student 5 : </label>
+            <input type="text" name="mark" id="Number5" placeholder="Input Marks 5" />
+
+            <button onclick="findHighestMarks()">Find Heighest marks</button>
+
+            <div id="blankCont"></div>
+        </div>
+    </div>
+
+
+    <script>
+        function findHighestMarks(event) {
+            // event.preventDefault();
+            const marks1 = Number(document.getElementById("Number1").value);
+            const marks2 = Number(document.getElementById("Number2").value);
+            const marks3 = Number(document.getElementById("Number3").value);
+            const marks4 = Number(document.getElementById("Number4").value);
+            const marks5 = Number(document.getElementById("Number5").value);
+            const marks = [marks1, marks2, marks3, marks4, marks5];
+            let highestMarks = marks[0];
+
+            for (let i = 0; i < marks.length; i++) {
+                highestMarks = marks[i] > highestMarks ? marks[i] : highestMarks;
+            }
+
+            // This is for blankcont. to store the value and display value.
+            const resultElement = document.getElementById("blankCont");
+            resultElement.textContent = `The highest marks scored by a student  is: ${highestMarks}`;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+

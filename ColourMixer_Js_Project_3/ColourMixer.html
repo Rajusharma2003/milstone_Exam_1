@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColourMixer</title>
+
+
+    <!-- Link google fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet" />
+
+
+
+    <!-- Write here CSS -->
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+       
+        .cont{
+          
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+        }
+        input{
+            padding: 5px 30px;
+            margin: 3px;
+            font-size: 15px;
+            border-radius: 10px;
+        }
+        .cont_item{
+            background-image: linear-gradient(to right , rgb(255, 255, 255) , red);
+            border: 2px solid black;
+            padding: 40px;
+            border-radius: 10px;
+
+        }
+        #ColourMixer{
+            margin-left: 80px;
+            margin-top: 10px;
+           cursor: pointer;
+           padding: 10px;
+           border-radius: 10px;
+           background-color: #000000;
+           color: white;
+          
+        }
+        #ColourMixer:hover{
+            background-color: #fff;
+            color: #000000;
+        }
+
+        /* This is a uility class for center displayColourName */
+        .ut_allCen{
+           
+            display: flex;
+          justify-content: center;
+          align-items: center;
+
+        }
+        #displayColour{
+           
+            border: 2px solid black;
+            width: 100px;
+            margin: auto;
+           height: 110px;
+           margin-top: -200px;
+           border-radius: 10px;
+           
+
+        }
+        
+        #displayColourName{
+            font-size: 25px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    
+<div class="cont">
+<div class="cont_item">
+
+
+    <h1>Colour Mixer Box</h1>
+
+<!-- This is a form -->
+    <form id="form">
+
+        <label for="colour"></label>
+        <input type="text" name="colour" id="colour1" placeholder="InputColour1">
+
+        <br>
+
+        <label for="colour"></label>
+        <input type="text" name="colour" id="colour2" placeholder="InputColour2">
+
+       <br>
+<!-- This is a submit button -->
+        <button id="ColourMixer" type="submit">Mix Colour</button>
+
+
+    </form>
+
+</div>
+</div>
+
+<!-- displayColourBox -->
+<div id="displayColour" ></div >
+
+    <!-- displayColourName -->
+<div id="displayColourName" class="ut_allCen">displayColourName :</div>
+
+
+    <!-- link here JavaScript -->
+    <script src="./ColourMixer.js"></script>
+</body>
+</html>

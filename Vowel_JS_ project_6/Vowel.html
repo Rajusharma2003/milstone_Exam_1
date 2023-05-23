@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vowel | project | 6 </title>
+
+    <link rel="stylesheet" href="./Vowel.css">
+</head>
+<body>
+    <div class="cont">
+        <div class="itemCont">
+
+        <h1>Vowel Counter !</h1>
+
+        <input type="text" id="input" placeholder="Enter Vowel Character">
+ <br>
+        <button type="submit" id="button">Count Vowel</button>
+        <div id="PassingMassage"></div>
+    </div>
+    </div>
+
+
+    <!-- JavaScript -->
+
+    <script>
+ 
+ const input = document.getElementById('input');
+ const button = document.getElementById('button');
+ const Massage = document.getElementById('PassingMassage');
+    
+    let Valcounter = 0; //for store the value.
+
+    button.addEventListener('click' , () => {
+        let input =  document.getElementById('input').value.toLowerCase();
+        let split = input.split('');
+        input.value = "";
+
+
+        for(let i = 0 ; i < split.length ; i++ ) {
+
+            if(split[i] === 'a' || split[i] === 'e'|| split[i] === 'i'|| split[i] === 'o'|| split[i] === 'u') {
+                Valcounter++;
+
+                if(Valcounter > 1){
+                    Massage.innerText = `${input} has ${Valcounter} vowels`;
+
+                }else{
+                    Massage.innerText = `${input} has ${Valcounter} vowel`;
+
+                }
+               
+            }
+        }
+    })
+       
+      
+
+    </script>
+</body>
+</html>
